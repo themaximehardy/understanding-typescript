@@ -4,7 +4,7 @@
 
 ### Intro
 
-TypeScript does not change the runtime code. but it super set JS and help prevent problem during development
+TypeScript does not change the runtime code produced. It super set JS and help prevent problem during development.
 
 ```ts
 function add(n1: number, n2: number) {
@@ -16,8 +16,7 @@ const result = add(number1, number2); // Argument of type '"5"' is not assignabl
 console.log(result);
 ```
 
-≠ between JS and TS, JS is dynamically typed (resolved at runtime) and TS is statically typed (set during development)
-TS helps us to fix bugs earlier
+≠ between JS and TS, **JS is dynamically typed** (resolved at runtime) and **TS is statically typed** (set during development). TS helps us to fix bugs earlier.
 
 ```ts
 function add(n1: number, n2: number) {
@@ -35,12 +34,15 @@ console.log(result);
 ```
 
 In TypeScript, you work with types like `string` or `number`.
+
 **Important**: It is `string` and `number` (etc.), NOT `String`, `Number` (etc.).
 **The core primitive types in TypeScript are all lowercase!**
 
+---
+
 ### Type Inference
 
-TypeScript can infer the data type of a variable as we assign values to them. For example, if we assign a value to a number, then it automatically knows that the value is a number without us telling it explicitly in the code that the variable has the data type number.
+TypeScript can **infer** the data type of a variable as we assign values to them. For example, if we assign a value to a `number`, then it **automatically knows that the value is a number** without us telling it explicitly in the code that the variable has the data type number.
 
 ```ts
 let number3: number; // Good practice to tell TS which value will be stored
@@ -49,15 +51,17 @@ let number1 = 5; // Inference, TS detect `number1` store a number
 number1 = '1'; // Type '"1"' is not assignable to type 'number'.
 ```
 
+---
+
 ### QUIZZ
 
 #### Understanding Types
 
-1. Why are "Types" useful and offer an advantage compare to vanilla JavaScript?
+##### 1. Why are "Types" useful and offer an advantage compare to vanilla JavaScript?
 
-Types allow you to detect errors early and avoid some runtime errors
+> Types allow you to detect errors early and avoid some runtime errors
 
-2. Will the following code throw a compilation error?
+##### 2. Will the following code throw a compilation error?
 
 ```ts
 let userName: string;
@@ -65,19 +69,21 @@ userName = 'Max';
 userName = false;
 ```
 
-Yes, assigning a boolean to a variable which was assigned a "string" types is not allowed and will yield a compilation error.
+> Yes, assigning a boolean to a variable which was assigned a "string" types is not allowed and will yield a compilation error.
 
-3. Does this code rely on type inference?
+##### 3. Does this code rely on type inference?
 
 ```ts
 const age: number = 29;
 ```
 
-Not really - a type is assigned explicitly as well. TypeScript would be able to infer the type (and hence you should omit ":number") but here, we actually also have an explicit type assignment.
+> Not really - a type is assigned explicitly as well. TypeScript would be able to infer the type (and hence you should omit ":number") but here, we actually also have an explicit type assignment.
 
-4. What's the difference between JavaScript types (e.g. typeof `'Max' => 'string'`) and TypeScript types (e.g. `const name: string = '...'`)?
+##### 4. What's the difference between JavaScript types (e.g. typeof `'Max' => 'string'`) and TypeScript types (e.g. `const name: string = '...'`)?
 
-TS types are checked during compilation, JS types during runtime. JS has no compilation step but at runtime, you can check for certain types (e.g. in if conditions). TS on the other hand allows you to catch certain errors during development since it checks types during compilation as well.
+> TS types are checked during compilation, JS types during runtime. JS has no compilation step but at runtime, you can check for certain types (e.g. in if conditions). TS on the other hand allows you to catch certain errors during development since it checks types during compilation as well.
+
+---
 
 ### Object Types
 
@@ -161,6 +167,8 @@ This would be the type of such an object:
 }
 ```
 
+---
+
 ### Array Types
 
 ```ts
@@ -184,9 +192,11 @@ for (const hobby of person.hobbies) {
 }
 ```
 
+---
+
 ### Working with Tuples
 
-Tuples are added by TypeScript = fixed length array (AND fixed type)
+Tuples are added by TypeScript = **fixed length array** (AND fixed type).
 
 ```ts
 const person: {
@@ -207,9 +217,11 @@ person.role.push('admin'); // Shouldn't be allowed
 person.role[1] = 10; // // Shouldn't be allowed
 ```
 
+---
+
 ### Working with Enums
 
-Enums are added by TypeScript. Automatically enumerated global constant identifiers
+Enums are added by TypeScript. Automatically **enumerated global constant identifiers**.
 
 ```ts
 enum Role {
@@ -264,9 +276,13 @@ enum Role {
 }
 ```
 
+---
+
 ### The "any" Type
 
-AVOID IT
+AVOID `any` type.
+
+---
 
 ### Union Types
 
@@ -287,6 +303,8 @@ console.log(combinedAges);
 const combinedNames = combine('Max', 'Anna');
 console.log(combinedNames);
 ```
+
+---
 
 ### Literal Types
 
@@ -316,6 +334,8 @@ const combinedNames = combine('Max', 'Anna', 'as-text');
 console.log(combinedNames);
 ```
 
+---
+
 ### Type Aliases & Object Types
 
 ```ts
@@ -333,14 +353,14 @@ function combine(
 }
 ```
 
-Type aliases can be used to "create" your own types. You're not limited to storing union types though - you can also provide an alias to a (possibly complex) object type. For examples:
+Type aliases can be used to **"create" your own types**. You're not limited to storing union types though - you can also provide an alias to a (possibly complex) object type. For examples:
 
 ```ts
 type User = { name: string; age: number };
 const u1: User = { name: 'Max', age: 30 }; // this works!
 ```
 
-This allows you to avoid unnecessary repetition and manage types centrally.
+This allows you to **avoid unnecessary repetition** and manage types centrally.
 
 For example, you can simplify this code:
 
@@ -368,11 +388,13 @@ function isOlder(user: User, checkAge: number) {
 }
 ```
 
+---
+
 ### QUIZZ
 
 #### Core Types & Concepts
 
-1. Which of the following snippets could be simplified by using an enum type?
+##### 1. Which of the following snippets could be simplified by using an enum type?
 
 a)
 
@@ -394,27 +416,27 @@ const ROLE_ADMIN = 0;
 const ROLE_AUTHOR = 1;
 ```
 
-c is the answer
+> c is the answer
 
-2. Will the following code throw a compilation error?
+##### 2. Will the following code throw a compilation error?
 
 ```ts
 type User = { name: string; age: number };
 const u1: User = ['Max', 29];
 ```
 
-Yes! The "User" type clearly wants an object with a "name" and an "age" property. NOT an array.
+> Yes! The "User" type clearly wants an object with a "name" and an "age" property. NOT an array.
 
-3. Will this code make it through compilation?
+##### 3. Will this code make it through compilation?
 
 ```ts
 type Product = { title: string; price: number };
 const p1: Product = { title: 'A Book', price: 12.99, isListed: true };
 ```
 
-No, `isListed` is not part of the "Product" type.
+> No, `isListed` is not part of the "Product" type.
 
-4. Will this code make it through compilation?
+##### 4. Will this code make it through compilation?
 
 ```ts
 type User = { name: string } | string;
@@ -422,7 +444,9 @@ let u1: User = { name: 'Max' };
 u1 = 'Michael';
 ```
 
-Yes! This code is fine. The union type allows either an object (with a "name" property) OR a string. You can switch values how often you want.
+> Yes! This code is fine. The union type allows either an object (with a "name" property) OR a string. You can switch values how often you want.
+
+---
 
 ### Function Return Types & "void"
 
@@ -460,6 +484,8 @@ printResult(add(5, 12));
 let someValue: undefined;
 ```
 
+---
+
 ### Functions as Types
 
 ```ts
@@ -484,6 +510,8 @@ combineValues = printResult; // KO
 combineValues(5, 12);
 ```
 
+---
+
 ### Functions Types & Callbacks
 
 ```ts
@@ -497,11 +525,13 @@ addAndHandle(1, 3, (result) => {
 });
 ```
 
+---
+
 ### QUIZZ
 
 #### Functions & Types
 
-1. Will this code compile?
+##### 1. Will this code compile?
 
 ```ts
 function sendRequest(data: string, cb: (response: any) => void) {
@@ -515,13 +545,13 @@ sendRequest('Send this!', (response) => {
 });
 ```
 
-Yes. Callback functions can return something, even if the argument on which they're passed does NOT expect a returned value.
+> Yes. Callback functions can return something, even if the argument on which they're passed does NOT expect a returned value.
 
-2. What's the idea behind a "function type"?
+##### 2. What's the idea behind a "function type"?
 
-Function types define the parameters and return type of a function.
+> Function types define the parameters and return type of a function.
 
-3. Which code snippet is better (i.e. which code should you write)?
+##### 3. Which code snippet is better (i.e. which code should you write)?
 
 a)
 
@@ -539,9 +569,11 @@ function sayHi(): undefined {
 }
 ```
 
-The answer is a because it doesn't force you to return anything if you don't want to return something
+> The answer is a because it doesn't force you to return anything if you don't want to return something
 
-### The "unknow" Type
+---
+
+### The "unknown" Type
 
 ```ts
 let userInput: unknown;
@@ -576,7 +608,9 @@ userInput = 'Max'; // OK
 userName = userInput; // OK
 ```
 
-`unknow` is better than `any` because it keep an extra check / some type checking
+Using `unknow` is better than `any` because it keep an extra check / some type checking.
+
+---
 
 ### The "never" Type
 
