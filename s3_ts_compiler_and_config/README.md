@@ -22,7 +22,7 @@ Now, each time you want to compile `app.ts` file we do `tsc app.ts`.
 
 As soon as you have set up `tsconfig.json` file, you can run `tsc` and it will compile all your TypeScript files.
 
-```json
+```js
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
