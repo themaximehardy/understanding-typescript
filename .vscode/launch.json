@@ -5,12 +5,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "chrome",
       "request": "launch",
-      "name": "Launch Program",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${file}", // https://stackoverflow.com/a/55870025/13883704
-      "console": "integratedTerminal"
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:3000", // same as the
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
