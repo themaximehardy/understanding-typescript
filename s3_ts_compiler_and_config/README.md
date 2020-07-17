@@ -98,7 +98,7 @@ As soon as you have set up `tsconfig.json` file, you can run `tsc` and it will c
 
 ### Including & Excluding Files
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -126,7 +126,7 @@ As soon as you have set up `tsconfig.json` file, you can run `tsc` and it will c
 
 ### Setting a Compilation Target
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -141,7 +141,7 @@ As soon as you have set up `tsconfig.json` file, you can run `tsc` and it will c
 
 ### Understanding TypeScript Core Libs
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -168,7 +168,7 @@ The default objects and features available will depend on your `target`.
 
 The map files generated act as a **bridge** in the modern browsers and the developer tools to connect the JS files to the input TS files. **We can even breakpoint in our TS file.**
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -184,7 +184,7 @@ The map files generated act as a **bridge** in the modern browsers and the devel
 
 A good prcatice is to set up a `src` folder with all the TS files (and folders) and a `dist` folder where all the JS file compiled/generated are.
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -201,7 +201,7 @@ A good prcatice is to set up a `src` folder with all the TS files (and folders) 
 
 `noEmitOnError` prevents code to be compiled if there is an error.
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -215,7 +215,7 @@ A good prcatice is to set up a `src` folder with all the TS files (and folders) 
 
 ### Strict Compilation
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -231,7 +231,7 @@ A good prcatice is to set up a `src` folder with all the TS files (and folders) 
 
 It is a good practice to put keep them at `true` (default value).
 
-```json
+```js
 {
   "compilerOptions": {
     //...
@@ -252,7 +252,7 @@ It is a good practice to put keep them at `true` (default value).
 2. Go to Debug and create a config file for "Chrome".
 3. You should see:
 
-```json
+```js
 {
   // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.
