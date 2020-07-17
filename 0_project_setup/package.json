@@ -5,8 +5,7 @@
   "main": "app.ts",
   "dependencies": {},
   "devDependencies": {
-    "lite-server": "^2.5.4",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "lite-server",
