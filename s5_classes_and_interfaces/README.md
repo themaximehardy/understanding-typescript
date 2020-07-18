@@ -1,5 +1,10 @@
 # Classes & Interfaces
 
+### Useful Resources & Links
+
+- [More on (JS) Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [TS Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+
 ### What are Classes?
 
 What's Object-oriented Programming (OOP)?
