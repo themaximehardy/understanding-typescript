@@ -1,0 +1,25 @@
+{
+  "name": "understanding-typescript",
+  "version": "1.0.0",
+  "description": "typescript project setup",
+  "main": "app.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "start": "lite-server",
+    "tsc": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themaximehardy/understanding-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/themaximehardy/understanding-typescript/issues"
+  },
+  "homepage": "https://github.com/themaximehardy/understanding-typescript#readme"
+}
