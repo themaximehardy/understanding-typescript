@@ -1,4 +1,4 @@
-# Modules & Namespaces
+# Using Webpack with TypeScript
 
 ### Useful Resources & Links
 
