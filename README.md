@@ -16,5 +16,5 @@ _Notes based on Colt Steele's fantastic course._
 | 11  | [ Using Webpack with TypeScript ](s11_webpack_and_ts/README.md)                                   |
 | 12  | [ 3rd Party Libraries & TypeScript ](s12_3rd_party_lib_and_ts/README.md)                          |
 | 13  | [ Let's build a "Select & Share a Place" App ](s13_ts_select_and_share_a_place_project/README.md) |
-| 14  | [ React.js & TypeScript ](#)                                                                      |
-| 15  | [ Node.js + Express & TypeScript ](#)                                                             |
+| 14  | [ React.js & TypeScript ](s14_reactjs_and_ts/README.md)                                           |
+| 15  | [ Node.js + Express & TypeScript ](s15_nodejs_express_and_ts/README.md)                           |
